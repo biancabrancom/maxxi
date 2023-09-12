@@ -1,0 +1,69 @@
+html{
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: rgb(225, 255, 255);
+}
+
+header {
+    background-color: #15dfdf;
+    padding: 2%;
+}
+
+form {
+    background-color: #15dfdf6a;
+    margin: 30% 10%;
+    padding: 7%;
+    border-radius: 20px;
+}
+
+#botao_titulo {
+    display: flex;
+    padding: 0;
+}
+
+#header-menu {
+    color: white;
+    margin: 1%;
+}
+
+#header-login {
+    color: white;
+    margin: 1%;
+    display: flexbox;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #15dfdf;
+    border-radius: 5px;
+    border: none;
+    margin-right: 3px;
+}
+
+.btn-primary:hover {
+    background-color: #109ca6;
+}
+
+.page-link {
+    color: #109ca6;
+}
+
+
+
+.form-check {
+    display: flexbox;
+    align-items: center;
+}
+
+a {
+    display: flexbox;
+    color: #109ca6;
+}
+
+/*rgba(150, 29, 171, 0.667) : roxo
