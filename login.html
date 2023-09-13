@@ -15,8 +15,8 @@
   </head>
 
   <header>
-        <h5 id="header-login">MAXXI | Folha online</h5>
-</header>
+    <h5 id="header-login"> Login </h5>
+  </header>
 
   <body>
     <form>
@@ -45,16 +45,25 @@
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*******">
       </div>
 
-      <p><a class="link-offset-2" href="#">Recuperar senha</a></p>
-            
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Manter login</label>
+      <div id="senha-login">
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Manter login</label>
+        </div>
+        <p><a class="link-offset-2" href="/recuperar-senha">Recuperar senha</a></p>
       </div>
 
-      <button type="submit" class="btn btn-primary" href="menu.html"> Acessar
-      </button>
-    </form>
 
+      <!-- LINK NAO FUNCIONA VER O QUE FAZER -->
+      <div id="btn-access">
+        <button type="submit" class="btn btn-primary"> <a id="btn-access" href="/menu.html"><strong>Acessar</strong></a>
+        </button>
+      </div>
+    </form>
 </body>
+
+<footer>
+  Maxxi | Potencializando sua eficiência
+</footer>
+
 </html>
