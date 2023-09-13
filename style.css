@@ -1,9 +1,11 @@
 html{
     -webkit-font-smoothing: antialiased;
+    min-width: 350px;
 }
 
 body {
     background-color: rgb(225, 255, 255);
+    min-height: 600px;
 }
 
 header {
@@ -16,6 +18,21 @@ form {
     margin: 30% 10%;
     padding: 7%;
     border-radius: 20px;
+    max-width: 400px;
+    max-width: 400px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2%;
+    font-size: small;
+    margin-top: 8.5rem;
+}
+
+h6 {
+    font-size: small;
 }
 
 #botao_titulo {
@@ -43,7 +60,13 @@ form {
     background-color: #15dfdf;
     border-radius: 5px;
     border: none;
-    margin-right: 3px;
+}
+
+#btn-access {
+    display: flex;
+    justify-content: flex-end;
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -54,11 +77,10 @@ form {
     color: #109ca6;
 }
 
-
-
-.form-check {
-    display: flexbox;
-    align-items: center;
+#senha-login {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
 }
 
 a {
