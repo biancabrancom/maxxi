@@ -16,13 +16,13 @@
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
             ☰
         </button>
-        <h5 id="header-menu">MAXXI | Folha online</h5>
+        <h4 id="header-menu">Maxxi</h4>
     </div>
 
     <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="staticBackdropLabel">
-            Olá, _______!
+            Bem vindo!
         </h5>
         
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
@@ -57,11 +57,68 @@
 </header>
 
   <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-    <br><br><br><br><br><br>
-    <br><br><br><br><br><br>
-    <br><br><br><br><br><br>
-    <br><br><br><br><br><br>
+    <!-- EDITAR ESSA PARTE
+         PEGAR UM RELATORIO DE MODELO
+         ALGUM TEMA E MONTAR OS GRÁFICOS
+
+         MUDAR TAMBÉM OS NOMES E TÍTULOS
+         -->
+
+        <div id="main-content">
+            <h4 class="mt-5">Visão geral</h4>
+            <p>Gráficos gerados em base dos relatórios de resultados do primeiro semestre de 2023.</p>
+
+            <div class="row">
+                <canvas id="aguaSemanal" style="width:100%;max-width:50%"></canvas>
+                <canvas id="exerciciosSemanal" style="width:100%;max-width:50%"></canvas>
+            </div>
+
+            <script>
+                const dias = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho"];
+                const litrosConsumidos = [2,3,3,2,2,4,1];
+                const exerciciosExec = [5,4,4,2,3,1,0]
+
+                new Chart("aguaSemanal", {
+                type: "line",
+                data: {
+                    labels: dias,
+                    datasets: [{
+                    borderColor: "#109ca6",
+                    backgroundColor: "rgb(225, 255, 255, 0)",
+                    data: litrosConsumidos
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                    display: true,
+                    text: "Consumo de água semanal em litros"
+                    }
+                }
+                });
+
+                new Chart("exerciciosSemanal",{
+                    type: "line",
+                    data:{
+                        labels: dias,
+                        datasets:[{
+                        borderColor: "#109ca6",
+                        backgroundColor: "rgb(225, 255, 255, 0)",
+                            data: exerciciosExec
+                        }]
+                    },
+                    options: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: "Execução de atividades físicas semanal"
+                        }
+                    }
+                });
+            </script>
+        </div>
 
     <nav aria-label="Page navigation example">
         <ul class="pagination">
