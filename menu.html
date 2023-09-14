@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Menu</title>
+    <title>Menu</title>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!--NAO TA FUNCIONANDO-->
+    <link rel="shortcut icon" href="/assets/logo.ico">
+    
   </head>
   
 <header>
@@ -33,21 +37,21 @@
     <div class="offcanvas-body">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#">Holerites</a>
+                <a class="nav-link" href="/holerites.html">Holerites</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Desempenho</a>
+                <a class="nav-link" href="/desempenho">Desempenho</a>
                 </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Funcionários</a>
+                <a class="nav-link" href="/funcionarios">Funcionários</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Minha conta
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Meus dados</a></li>
-                    <li><a class="dropdown-item" href="#">Precisa de ajuda?</a></li>
+                    <li><a class="dropdown-item" href="/perfil">Meus dados</a></li>
+                    <li><a class="dropdown-item" href="/help">Precisa de ajuda?</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item-logout" href="login.html">Sair</a></li>
                 </ul>
@@ -59,93 +63,61 @@
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-    <!-- EDITAR ESSA PARTE
-         PEGAR UM RELATORIO DE MODELO
-         ALGUM TEMA E MONTAR OS GRÁFICOS
-
-         MUDAR TAMBÉM OS NOMES E TÍTULOS
-         -->
-
         <div id="main-content">
             <h4 class="mt-5">Visão geral</h4>
-            <p>Gráficos gerados em base dos relatórios de resultados do primeiro semestre de 2023.</p>
+            <p>Gráficos gerados em base dos relatórios de 2023.</p><br>
 
             <div class="row">
-                <canvas id="aguaSemanal" style="width:100%;max-width:100%"></canvas> <br>
-                <canvas id="exerciciosSemanal" style="width:100%;max-width:100%"></canvas>
+                <canvas id="receitas" style="width:100%;max-width:100%"></canvas> <br><br>
+                <canvas id="despesas" style="width:100%;max-width:100%"></canvas>
             </div>
 
             <script>
-                const dias = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho"];
-                const litrosConsumidos = [2,3,3,2,2,4,1];
-                const exerciciosExec = [5,4,4,2,3,1,0]
+                const meses = ["JAN", "", "", "JUN", "", "", "DEZ"];
+                const valoresReceita = [60,50,65,60,75,55,60];
+                const valoresDespesa = [50,60,50,75,60,65,55]
 
-                new Chart("aguaSemanal", {
+                new Chart("receitas", {
                 type: "line",
                 data: {
-                    labels: dias,
+                    labels: meses,
                     datasets: [{
                     borderColor: "#109ca6",
                     backgroundColor: "rgb(225, 255, 255, 0)",
-                    data: litrosConsumidos
+                    data: valoresReceita
                     }]
                 },
                 options: {
                     legend: {display: false},
                     title: {
                     display: true,
-                    text: "Consumo de água semanal em litros"
+                    text: "Receitas 2023"
                     }
                 }
                 });
 
-                new Chart("exerciciosSemanal",{
-                    type: "line",
-                    data:{
-                        labels: dias,
-                        datasets:[{
-                        borderColor: "#109ca6",
-                        backgroundColor: "rgb(225, 255, 255, 0)",
-                            data: exerciciosExec
-                        }]
-                    },
-                    options: {
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: "Execução de atividades físicas semanal"
-                        }
+                new Chart("despesas",{
+                type: "line",
+                data:{
+                    labels: meses,
+                    datasets:[{
+                    borderColor: "#109ca6",
+                    backgroundColor: "rgb(225, 255, 255, 0)",
+                        data: valoresDespesa
+                    }]
+                },
+                options: {
+                    legend: {display: false },
+                    title: {
+                    display: true,
+                    text: "Despesas 2023"
                     }
+                }
                 });
+
             </script>
         </div>
 
-    <!--COLOCAR PAGINAÇÃO NOS RELATORIOS
-
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                 <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    -->
 
   </body>
   
