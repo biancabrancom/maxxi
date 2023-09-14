@@ -1,8 +1,14 @@
 /*geral*/
+@media screen and (max-width: 570px) {
 html{
     -webkit-font-smoothing: antialiased;
     min-width: 300px;
     max-width: 1900px;
+}
+
+header {
+    background-color: #15dfdf;
+    padding: 2%;
 }
 
 body {
@@ -11,10 +17,30 @@ body {
     max-width: 1900px;
 }
 
+a {
+    display: flexbox;
+    color: #08484d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
 /*login*/
-header {
-    background-color: #15dfdf;
-    padding: 2%;
+#logo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-left: 35%;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
 #header-login {
@@ -23,9 +49,9 @@ header {
     display: flex;
 }
 
-form {
-    background-color: #15dfdf6a;
-    margin: 10% 37% 0% 5%;
+#form-login {
+    background-color: #78eeee;
+    margin: 30% 10%;
     padding: 7%;
     border-radius: 20px;
 }
@@ -33,30 +59,28 @@ form {
 #senha-login {
     display: flex;
     justify-content: space-between;
-    font-size: small;
     align-items: flex-end;
 }
 
-.mb-3.form-check {
-    margin-bottom: 30px;
+.form-check {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input {
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.form-check-label {
+    margin-top: 2px;
 }
 
 #btn-access {
     display: flex;
     justify-content: flex-end;
     color: whitesmoke;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 3%;
-    font-size: small;
-}
-
-h6 {
-    font-size: small;
 }
 
 /*menu*/
@@ -71,10 +95,8 @@ h6 {
 }
 
 #main-content {
-    margin-top: 20px;
-    margin-right: 40px;
-    margin-bottom: 20px;
-    margin-left: 70px;
+    margin-left: 8%;
+    margin-right: 8%;
     max-width: 400px;   
 }
 
@@ -101,12 +123,6 @@ h6 {
     color: #109ca6;
 }
 
-a {
-    display: flexbox;
-    color: #08484d;
-    text-decoration: none;
-}
-
 .offcanvas-start {
     max-width: 70%;
 }
@@ -124,7 +140,6 @@ a {
 }
 
 /*graficos*/
-
 .row {
     display: flex;
     flex-direction: column;
@@ -133,6 +148,7 @@ a {
 
 .mt-5 {
     margin-bottom: 15px;
+}
 }
 
 /*rgba(150, 29, 171, 0.667) : roxo
