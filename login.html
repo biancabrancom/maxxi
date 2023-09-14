@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,29 +11,32 @@
     </script>
     <link rel="stylesheet" href="style.css">
 
+    <!--NAO TA FUNCIONANDO-->
+    <link rel="shortcut icon" href="/assets/logo.ico">
+
   </head>
 
   <header>
-    <h5 id="header-login"> Login </h5>
+    <h5 id="header-login"> Maxxi </h5>
   </header>
 
   <body>
-    <form>
+    <form id="form-login">
+        <img id="logo" src="/assets/logo.ico" alt="logo"><br>
+      <h3 id="welcome">Bem vindo!</h3><br>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Endereço de email</label>
         
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="exemplo@maxxi.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
-
         </div>
 
-        <!-- dados incorretos
-          <form class="form-floating">
-            <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
-            <label for="floatingInputInvalid">Invalid input</label>
-          </form>
-        -->
-
+      <!-- dados incorretos
+        <form class="form-floating">
+          <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
+          <label for="floatingInputInvalid">Invalid input</label>
+        </form>
+      -->
       </div>
 
       <div class="mb-3">
@@ -56,14 +58,10 @@
 
       <!-- LINK NAO FUNCIONA VER O QUE FAZER -->
       <div id="btn-access">
-        <button type="submit" class="btn btn-primary"> <a id="btn-access" href="/menu.html"><strong>Acessar</strong></a>
+        <button type="submit" class="btn btn-primary">
+          <a id="btn-access" href="www.youtube.com" target="_blank"><strong>Acessar</strong></a>
         </button>
       </div>
     </form>
 </body>
-
-<footer>
-  Maxxi | Potencializando sua eficiência
-</footer>
-
 </html>
