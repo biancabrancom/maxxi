@@ -24,11 +24,6 @@ a {
     cursor: pointer;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-}
-
 /*login*/
 #logo {
     width: 30%;
@@ -91,12 +86,14 @@ footer {
 
 #header-menu {
     color: white;
-    margin: 1%;
+    margin: 3%;
 }
 
 #main-content {
-    margin-left: 8%;
-    margin-right: 8%;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 90%;
     max-width: 400px;   
 }
 
@@ -143,12 +140,18 @@ footer {
 .row {
     display: flex;
     flex-direction: column;
-    margin: 0;
 }
 
-.mt-5 {
-    margin-bottom: 15px;
-}
+/*holerite*/
+
+#hrt-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 10%; 
 }
 
-/*rgba(150, 29, 171, 0.667) : roxo
+.card {
+    border-radius: 15px;
+}
+
+}/*rgba(150, 29, 171, 0.667) : roxo
