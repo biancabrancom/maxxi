@@ -30,7 +30,22 @@ a {
     display: flex;
     justify-content: center;
     margin-left: 35%;
-}
+    animation-duration: 0.8s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 60%;
+      width: 30%;
+    }
+  
+    to {
+      margin-left: 35%;
+      width: 30%;
+    }
+  }
+
 
 #welcome {
     display: flex;
@@ -77,6 +92,16 @@ a {
     justify-content: flex-end;
     color: whitesmoke;
 }
+.btn-primary {
+    background-color: #15dfdf;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #15dfdf;
+    transition: 0.8s;
+}
 
 /*menu*/
 #botao_titulo {
@@ -104,16 +129,6 @@ a {
     align-items: flex-end;
     padding: 2%;
     font-size: small;
-}
-
-.btn-primary {
-    background-color: #15dfdf;
-    border-radius: 5px;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #109ca6;
 }
 
 .page-link {
