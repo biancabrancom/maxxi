@@ -3,9 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Desempenho</title>
-</head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="imagex/png" href="/logo.png">
+
+  </head>
+
+  <header>
+    <div id="botao_titulo">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+            ☰
+        </button>
+        <h4 id="header-menu">Desempenho</h4>
+    </div>
+
+    <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="staticBackdropLabel">
+            Bem vindo!
+        </h5>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+        aria-label="Close">
+        </button>
+    </div>
+
+    <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="/menu.html">Visão geral</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/holerites.html">Holerites</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/desempenho">Desempenho</a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/funcionarios">Funcionários</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Minha conta
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/perfil">Meus dados</a></li>
+                    <li><a class="dropdown-item" href="/help">Precisa de ajuda?</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item-logout" href="login.html">Sair</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+  </header>
+
+  
 <body>
-    <h1>Desempenho</h1>
+    <div id="pesquisa-periodo">
+    <h5 id="frase">Escolha o período desejado</h5>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Selecione período
+        </button>
+
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">1º Trimestre/2023</a></li>
+        <li><a class="dropdown-item" href="#">2º Trimestre/2023</a></li>
+        <li><a class="dropdown-item" href="#">3º Trimestre/2023</a></li>
+        <li><a class="dropdown-item" href="#">4º Trimestre/2023</a></li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <div id="main-content-desempenho">
+    <div class="row">
+        <canvas id="receitas" style="width:100%;max-width:100%"></canvas> <br><br>
+        <canvas id="despesas" style="width:100%;max-width:100%"></canvas>
+    </div>
+
+    <script>
+        const meses = ["JAN", "", "", "JUN", "", "", "DEZ"];
+        const valoresReceita = [60,50,65,60,75,55,60];
+        const valoresDespesa = [50,60,50,75,60,65,55]
+
+        new Chart("receitas", {
+        type: "line",
+        data: {
+            labels: meses,
+            datasets: [{
+            borderColor: "#109ca6",
+            backgroundColor: "rgb(225, 255, 255, 0)",
+            data: valoresReceita
+            }]
+        },
+        options: {
+            legend: {display: false},
+            title: {
+            display: true,
+            text: "Receitas 2023"
+            }
+        }
+        });
+
+        new Chart("despesas",{
+        type: "line",
+        data:{
+            labels: meses,
+            datasets:[{
+            borderColor: "#109ca6",
+            backgroundColor: "rgb(225, 255, 255, 0)",
+                data: valoresDespesa
+            }]
+        },
+        options: {
+            legend: {display: false },
+            title: {
+            display: true,
+            text: "Despesas 2023"
+            }
+        }
+        });
+
+    </script>
 </body>
+
+<footer>
+    <p>Dados obtidos referentes ao ano de 2023</p>
+</footer>
 </html>

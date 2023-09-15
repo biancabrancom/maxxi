@@ -1,5 +1,5 @@
 /*geral*/
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 451px) {
 html{
     -webkit-font-smoothing: antialiased;
     min-width: 300px;
@@ -155,6 +155,7 @@ a {
 .row {
     display: flex;
     flex-direction: column;
+    margin: 10% 5%;
 }
 
 /*holerite*/
@@ -169,4 +170,43 @@ a {
     border-radius: 15px;
 }
 
-}/*rgba(150, 29, 171, 0.667) : roxo
+
+/*desempenho*/
+#hrt-cards-desempenho {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    width: 90%;
+    max-width: 400px; 
+}
+
+#pesquisa-periodo {
+    display: flex;
+    flex-direction: column;
+
+    margin: 5%;
+    width: 90%;
+
+    margin: 10% 5%;
+    max-width: 400px; 
+    background-color: white;
+    
+    border-radius: 15px;
+    padding: 5%;
+
+}
+.btn-secondary.dropdown-toggle {
+    background-color: white;
+    color: #000;
+    border: none;
+}
+
+#frase {
+    display: flex;
+    justify-content: center;
+}
+
+
+}
+/*rgba(150, 29, 171, 0.667) : roxo
+/*as vezes consigo me surpreender na lerdeza 

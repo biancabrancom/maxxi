@@ -7,5 +7,42 @@
 </head>
 <body>
     <h1>Portal da Transparência</h1>
+
+
+<!--
+    <div id="filtro-pesquisa">
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Grupo</th>
+                </tr>
+                <tr>
+                    <th><input type="text" id="txtColuna1"/></th>
+                    <th><input type="text" id="txtColuna2"/></th>
+                    <th><input type="text" id="txtColuna3"/></th>
+                </tr>            
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001.01-A</td>
+                    <td>Feijão preto</td>
+                    <td>Cerais</td>
+                </tr>
+
+
+                <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+            -->
 </body>
 </html>
