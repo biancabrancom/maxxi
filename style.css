@@ -122,6 +122,19 @@ a {
     max-width: 400px;   
 }
 
+/*graficos*/
+.row {
+    display: flex;
+    flex-direction: column;
+    width:110%
+}
+
+#titulo-menu {
+    margin: 5%;
+    padding-bottom: 3%; 
+
+}
+
 /*aba lateral*/
 .pagination {
     display: flex;
@@ -151,13 +164,6 @@ a {
     background-color: #000;
 }
 
-/*graficos*/
-.row {
-    display: flex;
-    flex-direction: column;
-    margin: 10% 5%;
-}
-
 /*holerite*/
 
 #hrt-cards {
@@ -172,33 +178,15 @@ a {
 
 
 /*desempenho*/
-#hrt-cards-desempenho {
-    display: flex;
-    flex-direction: column;
-    margin: 10%;
-    width: 90%;
-    max-width: 400px; 
-}
-
 #pesquisa-periodo {
     display: flex;
+    align-items: center;
     flex-direction: column;
 
-    margin: 5%;
+    margin: 10% 5% 0% 5%;
     width: 90%;
 
-    margin: 10% 5%;
     max-width: 400px; 
-    background-color: white;
-    
-    border-radius: 15px;
-    padding: 5%;
-
-}
-.btn-secondary.dropdown-toggle {
-    background-color: white;
-    color: #000;
-    border: none;
 }
 
 #frase {
@@ -206,7 +194,9 @@ a {
     justify-content: center;
 }
 
-
+.btn-secondary.dropdown-toggle {
+    background-color:  rgb(225, 255, 255);
+    color: #000;
+    border: none;
 }
-/*rgba(150, 29, 171, 0.667) : roxo
-/*as vezes consigo me surpreender na lerdeza 
+}
